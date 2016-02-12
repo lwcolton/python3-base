@@ -15,10 +15,6 @@
     },
     {
         "type": "shell",
-        "inline": "pip install -r /tmp/requirements.txt"
-    },
-    {
-        "type": "shell",
         "script": "install.sh"
     }
   ],
