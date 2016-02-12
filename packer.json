@@ -23,7 +23,7 @@
         "type": "docker-tag",
         "only": ["docker"],
         "repository": "python3-base",
-        "tag": "latest",
+        "tag": "develop",
         "force": true
       }
   ]
