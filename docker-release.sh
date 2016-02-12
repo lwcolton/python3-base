@@ -3,5 +3,5 @@ docker tag -f python3-base:develop 607520688049.dkr.ecr.us-east-1.amazonaws.com/
 docker push 607520688049.dkr.ecr.us-east-1.amazonaws.com/python3-base:latest
 git fetch origin
 git checkout master
-git merge develop
+git merge origin/develop
 git push origin master
