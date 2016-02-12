@@ -1,8 +1,7 @@
 set -e
 
 apt-get update 
-apt-get -y install python3-dev build-essential curl git libssl-dev libffi-dev vim
-update-alternatives --set editor /usr/bin/vim.basic
+apt-get -y install python3-dev build-essential curl git libssl-dev libffi-dev
 
 curl -L https://bootstrap.pypa.io/get-pip.py |python3 
 
