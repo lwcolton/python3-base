@@ -1,1 +1,1 @@
-docker build -t python3-base .
+packer build --only=docker packer.json
