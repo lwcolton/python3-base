@@ -5,6 +5,21 @@
       "image": "ubuntu:14.04",
       "commit": true,
       "pull": true
+    },
+    {
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "ami-35d6f95f",
+        "ami_name": "***REMOVED******REMOVED***-python3-base-{{ timestamp }}",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "vpc_id": "vpc-5ac2b03e",
+        "subnet_id": "subnet-944ddaa9",
+        "security_group_id":"sg-cfec81b6",
+        "associate_public_ip_address": true,
+        "iam_instance_profile":"",
+        "ssh_private_ip": true,
+        "ssh_pty": true
     }
   ],
   "provisioners": [
@@ -14,8 +29,13 @@
       "destination":"/tmp/requirements.txt"
     },
     {
-        "type": "shell",
-        "script": "install.sh"
+        "type": "file",
+        "source": "install.sh",
+        "destination":"/tmp/install.sh"
+    },
+    {
+        "type":"shell",
+        "inline":"chmod +x /tmp/install.sh && sudo /tmp/install.sh"
     }
   ],
   "post-processors": [
