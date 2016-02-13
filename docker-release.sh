@@ -3,7 +3,6 @@ $docker_login_cmd
 docker tag -f python3-base:develop 607520688049.dkr.ecr.us-east-1.amazonaws.com/python3-base:latest
 docker push 607520688049.dkr.ecr.us-east-1.amazonaws.com/python3-base:latest
 git fetch origin
-git checkout master
-git pull origin master
-git merge origin/develop
+git checkout -b master
+git merge $BUILDKITE_BRANCH
 git push origin master
