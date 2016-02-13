@@ -12,6 +12,4 @@ pip3 install -r /tmp/requirements.txt && rm -f /tmp/requirements.txt
 
 rm -f /usr/local/lib/python3.4/dist-packages/requests/cacert.pem && ln -s /etc/ssl/certs/ca-certificates.crt /usr/local/lib/python3.4/dist-packages/requests/cacert.pem
 
-useradd -d /home/app -m -u 1001 -s /bin/false app
-
 #WORKDIR /home/app
