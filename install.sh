@@ -1,5 +1,6 @@
 set -e
-
+locale-gen en_US.UTF-8
+rm -rf /var/lib/apt/lists/*
 apt-get update 
 apt-get -y install python3-dev build-essential curl git libssl-dev libffi-dev
 
