@@ -24,6 +24,10 @@
   ],
   "provisioners": [
     {
+        "type":"shell",
+        "inline":["echo Waiting on startup", "sleep 15"]
+    },
+    {
       "type":"file",
       "source":"requirements.txt",
       "destination":"/tmp/requirements.txt"
