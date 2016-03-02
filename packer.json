@@ -10,7 +10,7 @@
         "type": "amazon-ebs",
         "region": "us-east-1",
         "source_ami": "ami-8cdef4e6",
-        "ami_name": "***REMOVED******REMOVED***-python3-base-{{ timestamp }}",
+        "ami_name": "python3-base-{{ timestamp }}",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "vpc_id": "vpc-5ac2b03e",
